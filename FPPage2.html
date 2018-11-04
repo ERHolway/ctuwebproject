@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<!-- 
+Final Project, Page 2
+Hiking
+Beth Holway
+
+ -->
+<head>
+	<title>FP Page 2 - Hiking </title>
+	<link rel="stylesheet" href="FP.css">
+	
+	<style>
+	body
+	{
+		background-image:url('Images/Hikevalley.jpg'); 
+		background-repeat: no-repeat;
+		width: 1000px;
+		height: 1000px;
+		text-align: center;
+	}
+	
+	canvas
+	{
+		border: 3px solid #6E7964;
+	}
+	
+	.main
+	{
+		border: 10px solid #4D5546;
+	}
+	
+
+	#v
+	{
+    position: absolute;
+    top: 190%;
+    left: 90%;
+    margin: -220px 0 0 -370px;
+	}
+
+	video
+	{
+		width: 250px;
+		height: 150px;
+		border: 12px;
+		border-style: solid;
+		border-color: #821439;
+		text-align: center;
+
+	}
+	
+	
+	div, p
+	{
+		text-align: center;
+	}
+	
+	h3
+	{
+		width: 50%;
+		font-family: verdana;
+		background-color: #FFEAFF;
+		border: 2px solid black;
+		text-align: center;
+		margin-left: 250px;
+	}
+	
+	.textmetrics
+	{
+		text-align: center;
+		width: 350px;
+		font-family: 18px verdana;
+		border: 2px solid black;
+		background-color: #FFEAFF;
+		margin-left: 320px;
+
+	}
+
+	</style>
+</head>
+<body>
+<h2><a href="FPHome.html" style = "text-decoration: none">Home</a>
+   |  <a href="FPPage1.html" target="_blank" style = "text-decoration: none">Gardening</a>
+   |  <a href="FPPage2.html" target="_blank" style = "text-decoration: none">Hiking</a>
+   |  <a href="FPPage3.html" target="_blank" style = "text-decoration: none">Food</a>
+   |  <a href="FPPage4.html" target="_blank" style = "text-decoration: none">Geeky Stuff</a></h2>
+<hr style = "height:12px; background-color: #6E7964; border-color: #000000; border-size: 2px;">
+
+<canvas id="theHeadCanvas" width= "800" height= "200" style= "background-color:#B8C9A6;"></canvas>
+<script>
+var Cnvas = document.getElementById("theHeadCanvas");
+var HeadCnvasCntx = Cnvas.getContext('2d');
+
+/* Lines to Frame Logo */ 
+
+HeadCnvasCntx.strokeStyle = '#531C53';
+HeadCnvasCntx.lineWidth = '15';
+HeadCnvasCntx.beginPath();
+HeadCnvasCntx.moveTo(5,23);
+HeadCnvasCntx.lineTo(215,23);
+HeadCnvasCntx.stroke();
+HeadCnvasCntx.beginPath();
+HeadCnvasCntx.moveTo(5,15);
+HeadCnvasCntx.lineTo(5,190);
+HeadCnvasCntx.stroke();
+
+/* Logo Image in header canvas */
+var Pic = new Image();
+Pic.src = "Logos/esmtree.jpg";
+Pic.onload = function()
+{
+	HeadCnvasCntx.drawImage(Pic, 10, 25);
+}
+
+
+/* Heading Text */
+HeadCnvasCntx.lineWidth = '4';
+HeadCnvasCntx.font = 'italic bold 80px "lucida"';
+HeadCnvasCntx.fillStyle = '#8A2E8A';
+HeadCnvasCntx.strokeStyle = '#531C53';
+HeadCnvasCntx.fillText("Hiking", 325, 120);
+HeadCnvasCntx.strokeText("Hiking", 325, 120);
+
+</script>
+<hr style = "height:8px; background-color: #6E7964">
+<a href="#bottom" id="top">Go to the bottom...</a>
+
+<hr style = "height:8px; width: 80%; background-color: #6E7964">
+<hr  class = "style-seven" class = "style-seven:before">
+
+<canvas id="theCanvas" width= "800" height= "1200" class= "main"></canvas>
+<!-- Video too large for github -->
+<!-- <video id="v" controls loop>
+    <source src= "Videos/Hikemovie.m4v" >
+</video> -->
+<script>
+var Cnvas = document.getElementById("theCanvas");
+var CnvasCntx = Cnvas.getContext('2d');
+
+/* Images in canvas */
+var Pic2 = new Image();
+Pic2.src = "Images/Hikeincline.jpg";
+Pic2.onload = function()
+{
+	CnvasCntx.drawImage(Pic2, 180, 80);
+	
+}
+var Pic1 = new Image();
+Pic1.src = "Images/Hikeinteman.jpg";
+Pic1.onload = function()
+{
+	CnvasCntx.drawImage(Pic1, 0, 0);
+	
+	// Circle #1
+	// Filled circles for text
+	CnvasCntx.beginPath();
+	CnvasCntx.fillStyle = '#B8C9A6';
+	CnvasCntx.lineWidth = '10';
+	CnvasCntx.arc(250,50,70,(Math.PI*2), false);
+	CnvasCntx.fill();
+	// Outlined circles
+	CnvasCntx.beginPath();
+	CnvasCntx.strokeStyle = '#4D5546';
+	CnvasCntx.lineWidth = '3';
+	CnvasCntx.arc(250,50,70,(Math.PI*2), false);
+	CnvasCntx.stroke();
+	// Text in circle
+	CnvasCntx.beginPath();
+	CnvasCntx.font = 'italic bold 15px "lucida"';
+	CnvasCntx.fillStyle = '#8A2E8A';
+	CnvasCntx.fillText("Up Intemann Trail...", 190, 44);
+	CnvasCntx.fillText("Down the Manitou", 187, 70);
+	CnvasCntx.fillText("Incline", 220, 90);
+}
+
+// Line #1
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '25';
+CnvasCntx.beginPath();
+CnvasCntx.moveTo(0,280);
+CnvasCntx.lineTo(330,280);
+CnvasCntx.stroke();
+
+
+var Pic3 = new Image();
+Pic3.src = "Images/Hikesect16.jpg";
+Pic3.onload = function()
+{
+	CnvasCntx.drawImage(Pic3, 400, 0);
+}
+
+var Pic4 = new Image();
+Pic4.src = "Images/Hikerockwall.jpg";
+Pic4.onload = function()
+{
+	CnvasCntx.drawImage(Pic4, 600, 100);
+	
+
+	
+	// Circle # 2
+	// Filled circles for text
+CnvasCntx.beginPath();
+CnvasCntx.fillStyle = '#B8C9A6';
+CnvasCntx.lineWidth = '10';
+CnvasCntx.arc(550,355,80,(Math.PI*2), false);
+CnvasCntx.fill();
+// Outlined circles
+CnvasCntx.beginPath();
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '3';
+CnvasCntx.arc(550,355,80,(Math.PI*2), false);
+CnvasCntx.stroke();
+// Text in circle
+CnvasCntx.beginPath();
+CnvasCntx.font = 'italic bold 15px "lucida"';
+CnvasCntx.fillStyle = '#8A2E8A';
+CnvasCntx.fillText("Across Section 16...", 483, 335);
+CnvasCntx.fillText("and into RedRocks", 488, 370);
+}
+
+// Line #2
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '55';
+CnvasCntx.beginPath(); 
+CnvasCntx.moveTo(580,90);
+CnvasCntx.lineTo(630,90);
+CnvasCntx.stroke();
+
+// Line #3
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '35';
+CnvasCntx.beginPath(); 
+CnvasCntx.moveTo(400,280);
+CnvasCntx.lineTo(700,280);
+CnvasCntx.stroke();
+
+// Line #4
+CnvasCntx.beginPath(); 
+CnvasCntx.moveTo(600,380);
+CnvasCntx.lineTo(800,380);
+CnvasCntx.stroke();
+
+var Pic7 = new Image();
+Pic7.src = "Images/Hikeclosed.jpg";
+Pic7.onload = function()
+{
+	CnvasCntx.drawImage(Pic7, 180, 360, Pic7.width*0.75, Pic7.height*0.75);
+	// Outlined circle - showing Park Closed
+	CnvasCntx.beginPath();
+	CnvasCntx.strokeStyle = '#000000';
+	CnvasCntx.lineWidth = '3';
+	CnvasCntx.arc(245,440,30,(Math.PI*2), false);
+	CnvasCntx.stroke();
+}
+
+// Line #6
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '40';
+CnvasCntx.beginPath();
+CnvasCntx.moveTo(430,612);
+CnvasCntx.lineTo(500,612);
+CnvasCntx.stroke();
+
+var Pic5 = new Image();
+Pic5.src = "Images/Hikewaterfall.jpg";
+Pic5.onload = function()
+{
+	CnvasCntx.drawImage(Pic5, 310, 375, Pic5.width*0.60, Pic5.height*0.60);
+}
+var Pic6 = new Image();
+Pic6.src = "Images/Hikeredrocks.jpg";
+Pic6.onload = function()
+{
+	CnvasCntx.drawImage(Pic6, 0,385);
+	
+	// Circle #3
+	// Filled circles for text
+	CnvasCntx.beginPath();
+	CnvasCntx.fillStyle = '#B8C9A6';
+	CnvasCntx.lineWidth = '10';
+	CnvasCntx.arc(250,610,80,(Math.PI*2), false);
+	CnvasCntx.fill();
+	// Outlined circles
+	CnvasCntx.beginPath();
+	CnvasCntx.strokeStyle = '#4D5546';
+	CnvasCntx.lineWidth = '3';
+	CnvasCntx.arc(250,610,80,(Math.PI*2), false);
+	CnvasCntx.stroke();
+	// Text in circle
+	CnvasCntx.beginPath();
+	CnvasCntx.font = 'italic bold 20px "lucida"';
+	CnvasCntx.fillStyle = '#8A2E8A';
+	CnvasCntx.fillText("DANGER!", 200, 580);
+	CnvasCntx.font = 'italic bold 15px "lucida"';
+	CnvasCntx.fillText("Park Closed due to", 180, 615);
+	CnvasCntx.fillText("Flash Floods...", 200, 630);
+}
+
+///////////////////////////////////////////////////////
+/* Video on canvas */
+
+document.addEventListener('DOMContentLoaded', function()
+{
+    var v = document.getElementById("v");
+    var canvas = v.getElementById("theCanvas");
+    var context = canvas.getContext('2d');
+
+    var cw = Math.floor(canvas.clientWidth / 100);
+    var ch = Math.floor(canvas.clientHeight / 100);
+    canvas.width = cw;
+    canvas.height = ch;
+
+    v.addEventListener('play', function()
+	{
+        draw(this,context,cw,ch);
+    },false);
+
+},false);
+
+function draw(v,c,w,h) 
+{
+    if(v.paused || v.ended) return false;
+    c.drawImage(v,0,0,w,h);
+    setTimeout(draw,20,v,c,w,h);
+}
+
+////////////////////////////////////////////////////////
+
+// Video Caption
+// <!-- Video too large for github -->
+	// CnvasCntx.beginPath();
+	// CnvasCntx.font = 'italic bold 20px "lucida"';
+	// CnvasCntx.fillStyle = '#000000';
+	// CnvasCntx.fillText("Stream Along Barr Trail", 545, 610);
+
+// Line #4
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '25';
+CnvasCntx.beginPath();
+CnvasCntx.moveTo(0,370);
+CnvasCntx.lineTo(490,370);
+CnvasCntx.stroke();
+
+// Line #5
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '25';
+CnvasCntx.beginPath();
+CnvasCntx.moveTo(0,650);
+CnvasCntx.lineTo(300,650);
+CnvasCntx.stroke();
+
+
+// Line #7
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '40';
+CnvasCntx.beginPath();
+CnvasCntx.moveTo(350,670);
+CnvasCntx.lineTo(350,900);
+CnvasCntx.stroke();
+
+// Line #8
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '40';
+CnvasCntx.beginPath();
+CnvasCntx.moveTo(340,880);
+CnvasCntx.lineTo(600,880);
+CnvasCntx.stroke();
+
+var Pic9 = new Image();
+Pic9.src = "Images/Hiketopofrr.jpg";
+Pic9.onload = function()
+{
+	CnvasCntx.drawImage(Pic9, 350, 670);
+	
+	// Circle #4
+	// Filled circles for text
+	CnvasCntx.beginPath();
+	CnvasCntx.fillStyle = '#B8C9A6';
+	CnvasCntx.lineWidth = '10';
+	CnvasCntx.arc(660,710,90,(Math.PI*2), false);
+	CnvasCntx.fill();
+	// Outlined circles
+	CnvasCntx.beginPath();
+	CnvasCntx.strokeStyle = '#4D5546';
+	CnvasCntx.lineWidth = '3';
+	CnvasCntx.arc(660,710,90,(Math.PI*2), false);
+	CnvasCntx.stroke();
+	// Text in circle
+	CnvasCntx.beginPath();
+	CnvasCntx.font = 'italic bold 18px "lucida"';
+	CnvasCntx.fillStyle = '#8A2E8A';
+	CnvasCntx.fillText("Move to higher", 590, 680);
+	CnvasCntx.fillText("ground and head", 610, 700);
+	CnvasCntx.fillText("towards ...", 620, 720);
+	CnvasCntx.fillText("The Shire", 640, 740);
+	
+}
+
+
+var Pic10 = new Image();
+Pic10.src = "Images/Hikepath.jpg";
+Pic10.onload = function()
+{
+	CnvasCntx.drawImage(Pic10, 0, 700);
+	
+	
+}
+
+	// Line #9
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '40';
+CnvasCntx.beginPath();
+CnvasCntx.moveTo(0,935);
+CnvasCntx.lineTo(800,935);
+CnvasCntx.stroke();
+
+// Line #10
+CnvasCntx.strokeStyle = '#4D5546';
+CnvasCntx.lineWidth = '40';
+CnvasCntx.beginPath();
+CnvasCntx.moveTo(490,980);
+CnvasCntx.lineTo(490,1200);
+CnvasCntx.stroke();
+
+
+var Pic12 = new Image();
+Pic12.src = "Images/Hikelothlorien.jpg";
+Pic12.onload = function()
+{
+	CnvasCntx.drawImage(Pic12, 500, 940);
+}
+
+var Pic11 = new Image();
+Pic11.src = "Images/Hikehobbit.jpg";
+Pic11.onload = function()
+{
+	CnvasCntx.drawImage(Pic11, 200, 900);
+	
+// Circle #5
+	// Filled circles for text
+	CnvasCntx.beginPath();
+	CnvasCntx.fillStyle = '#B8C9A6';
+	CnvasCntx.lineWidth = '10';
+	CnvasCntx.arc(140,1090,80,(Math.PI*2), false);
+	CnvasCntx.fill();
+	// Outlined circles
+	CnvasCntx.beginPath();
+	CnvasCntx.strokeStyle = '#4D5546';
+	CnvasCntx.lineWidth = '3';
+	CnvasCntx.arc(140,1090,80,(Math.PI*2), false);
+	CnvasCntx.stroke();
+	// Text in circle
+	CnvasCntx.beginPath();
+	CnvasCntx.font = 'italic bold 20px "lucida"';
+	CnvasCntx.fillStyle = '#8A2E8A';
+	CnvasCntx.fillText("Home Sweet", 85, 1075);
+	CnvasCntx.fillText("Hobbit Home", 100, 1105);
+
+// Circle #6
+	// Filled circles for text
+	CnvasCntx.beginPath();
+	CnvasCntx.fillStyle = '#B8C9A6';
+	CnvasCntx.lineWidth = '10';
+	CnvasCntx.arc(440,1130,70,(Math.PI*2), false);
+	CnvasCntx.fill();
+	// Outlined circles
+	CnvasCntx.beginPath();
+	CnvasCntx.strokeStyle = '#4D5546';
+	CnvasCntx.lineWidth = '3';
+	CnvasCntx.arc(440,1130,70,(Math.PI*2), false);
+	CnvasCntx.stroke();
+	// Text in circle
+	CnvasCntx.beginPath();
+	CnvasCntx.font = 'italic bold 20px "lucida"';
+	CnvasCntx.fillStyle = '#8A2E8A';
+	CnvasCntx.fillText("Lothlorien--", 390, 1115);
+	CnvasCntx.fillText("Too Far!!", 400, 1140);
+}
+
+
+
+	
+
+
+
+
+
+</script>
+
+<hr class = "style-seven" class = "style-seven:before">
+<hr style = "height:8px; width: 80%; background-color: #6E7964"  >
+<br>
+<br>
+<footer>
+<a href="#top" id="bottom">Go back to the top...</a>
+</footer>
+</body>
+</html>

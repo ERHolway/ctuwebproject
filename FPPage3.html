@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<!-- 
+Final Project, Page 3
+Food
+Beth Holway
+
+ -->
+<head>
+	<title>FP Page 3 - Food </title>
+	<link rel="stylesheet" href="FP.css">
+	
+	<style>
+	body
+	{
+		width: 1000px;
+		height: 1000px;
+		text-align: center;
+		font-family: verdana;
+	}
+	
+	canvas
+	{
+		border: 3px solid #6E7964;
+	}
+	
+	video
+	{
+		width: 500px;
+		border: 15px;
+		border-style: solid;
+		border-color: #821439;
+		text-align: center;
+
+	}
+	
+	div, p
+	{
+		text-align: center;
+	}
+	
+	h3
+	{
+		width: 50%;
+		font-family: verdana;
+		background-color: #FFEAFF;
+		border: 2px solid black;
+		text-align: center;
+		margin-left: 250px;
+	}
+	
+	.textmetrics
+	{
+		text-align: center;
+		width: 350px;
+		font-family: 18px verdana;
+		border: 2px solid black;
+		background-color: #FFEAFF;
+		margin-left: 320px;
+
+	}
+	
+	table
+	{
+		margin-left:auto;
+		margin-right:auto;
+		text-align: center;
+		width: 700px;
+		padding:20px;
+		border: solid #531C53 10px;
+		border-spacing:10px;
+		
+	}
+	
+	th,td
+	{
+		border: solid #6E7964 5px;
+		backgound-color: #B8C9A6;
+		width:100px;
+		height: 80px
+		padding: 10px;
+		vertical-align: center;
+		hoizontal-align: center;
+		font-size:18px;
+	}
+
+	.reducefont
+	{
+		font-size: 14px;
+		text-align: left;
+	}
+	
+	caption
+	{
+		text-align:center;
+		background-color: #CDD9C1;
+		border: solid #531C53 2px;
+		font-size: 30px;
+	}
+	
+	.aligncenter
+	{
+		margin-left:100px;
+		margin-right:auto;
+	}
+	
+	img
+	{
+		width: 200px;
+		border: 10px solid #7A8E66;
+	
+	}
+		
+	.floatleft
+	{
+		float:left;
+		width: 100px;
+	}
+	
+	.floatright
+	{
+		float:right;
+		width: 100px;
+	}
+	
+	.reduceimage
+	{
+		width: 150px;
+	}
+	
+	</style>
+</head>
+
+<body>
+<h2><a href="FPHome.html" style = "text-decoration: none">Home</a>
+   |  <a href="FPPage1.html" target="_blank" style = "text-decoration: none">Gardening</a>
+   |  <a href="FPPage2.html" target="_blank" style = "text-decoration: none">Hiking</a>
+   |  <a href="FPPage3.html" target="_blank" style = "text-decoration: none">Food</a>
+   |  <a href="FPPage4.html" target="_blank" style = "text-decoration: none">Geeky Stuff</a></h2>
+<hr style = "height:12px; background-color: #6E7964; border-color: #000000; border-size: 2px;">
+
+<canvas id="theHeadCanvas" width= "800" height= "200"></canvas>
+<script>
+var Cnvas = document.getElementById("theHeadCanvas");
+var HeadCnvasCntx = Cnvas.getContext('2d');
+
+/* Lines to Frame Logo */ 
+
+HeadCnvasCntx.strokeStyle = '#531C53';
+HeadCnvasCntx.lineWidth = '15';
+HeadCnvasCntx.beginPath();
+HeadCnvasCntx.moveTo(5,23);
+HeadCnvasCntx.lineTo(215,23);
+HeadCnvasCntx.stroke();
+HeadCnvasCntx.beginPath();
+HeadCnvasCntx.moveTo(5,15);
+HeadCnvasCntx.lineTo(5,190);
+HeadCnvasCntx.stroke();
+
+/* Image in canvas */
+var Pic = new Image();
+Pic.src = "Logos/esmtree.jpg";
+Pic.onload = function()
+{
+	HeadCnvasCntx.drawImage(Pic, 10, 25);
+}
+
+
+/* Heading Text */
+HeadCnvasCntx.lineWidth = '4';
+HeadCnvasCntx.font = 'italic bold 80px "lucida"';
+HeadCnvasCntx.fillStyle = '#8A2E8A';
+HeadCnvasCntx.strokeStyle = '#531C53';
+HeadCnvasCntx.fillText("Food", 325, 120);
+HeadCnvasCntx.strokeText("Food", 325, 120);
+
+</script>
+<hr style = "height:8px; width: 80%; background-color: #6E7964">
+<a href="#bottom" id="top">Go to the bottom...</a>
+<hr style = "height:8px; width: 80%; background-color: #6E7964">
+<hr  class = "style-seven" class = "style-seven:before">
+
+<table class = "aligncenter">
+<caption><b>Food is Fuel and Medicine!</b></caption><br>
+
+<tr>
+	<td ><b>Look, Feel and Perform Better!</b></td>
+	<td><img src = "Images/Foodchicken.jpg"></td>
+	<td class= "reducefont">
+	<ul>
+	<li><a href= "https://youtu.be/dBnniua6-oM" target="_blank" 
+	title= "A great lecture about sugar... but assume a confortable position- 
+	its 90 min long!">Sugar:The Bitter Truth</a></li><br>
+	<li><a href = "http://robbwolf.com/" target="_blank" 
+	title= "Click on Podcast and listen to a really smart guy talk about food">
+	Robb Wolf Link</a></li><br>
+	<li><a href= "http://www.cornerpostmeats.com/" target="_blank" 
+	title= "Local Colorado Ranchers- Beef and other slow-moving mammals">
+	Corner Post Meats</a></li></td>
+</tr>
+
+<tr>
+	<td><img src = "Images/Foodchicksal.jpg"></td> 
+	<td><b><u>Colors = Nutrients!</u></b><br><br>
+	The more colorful your meal is, the better it is for you.</td>
+	<td><img src = "Images/Foodfish.jpg"></td>
+</tr>
+
+<tr>
+	<td ><img class= "floatleft" src = "Logos/Foodcplogo.jpg"><br>Know Your Rancher<br><br><br>
+		<img class= "floatright" src = "Images/Foodcp1.jpg"><br><br>Grass Fed</td>
+	<td><img src = "Images/Foodmandc.jpg"></td>
+	<td><img src = "Images/Foodpaleo.jpg"><br>A couple life-enhancing resources</td>
+</tr>
+
+<tr>
+	<td><img src = "Images/Foodwine.jpg" class= "reduceimage"><br>A little bit of this kind of sugar might be ok! ;-)</td>
+	<td><img src = "Images/Foodomel.jpg"></td>
+	<td ><img src = "Images/Foodlatte.jpg" class= "reduceimage"><br>A latte with coconut milk- yum!</td>
+</tr>
+
+</table>
+
+
+
+<hr class = "style-seven" class = "style-seven:before">
+<hr style = "height:8px; width: 80%; background-color: #6E7964"  >
+<br>
+<br>
+<footer>
+<a href="#top" id="bottom">Go back to the top...</a>
+</footer>
+</body>
+</html>

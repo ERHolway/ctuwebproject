@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<!-- 
+Final Project, Page 4
+Geeky Stuff
+Beth Holway
+
+ -->
+<head>
+	<title>FP Page 4 - Geeky Stuff </title>
+	<link rel="stylesheet" href="FP.css">
+
+	<style>
+	body
+	{
+		background-image:url('Images/Geekbkgnd.jpg'); 
+		background-repeat: no-repeat;
+		width: 1000px;
+		height: 1000px;
+		text-align: center;
+	}
+	
+	canvas
+	{
+		border: 3px solid #6E7964;
+	}
+	
+	video
+	{
+		width: 500px;
+		border: 15px;
+		border-style: solid;
+		border-color: #821439;
+		text-align: center;
+
+	}
+	
+	div,p
+	{
+		text-align: center;
+	}
+	
+	h3
+	{
+		width: 50%;
+		font-family: verdana;
+		background-color: #E6D3E6;
+		border: 2px solid black;
+		text-align: center;
+		margin-left: 250px;
+	}
+	
+	.textmetrics
+	{
+		text-align: center;
+		width: 800px;
+		font-family: 18px verdana;
+		border: 2px solid black;
+		background-color: #FFEAFF;
+		margin-left: 100px;
+		
+
+	}
+
+	</style>
+</head>
+
+<body>
+<h2><a href="FPHome.html" style = "text-decoration: none">Home</a>
+   |  <a href="FPPage1.html" target="_blank" style = "text-decoration: none">Gardening</a>
+   |  <a href="FPPage2.html" target="_blank" style = "text-decoration: none">Hiking</a>
+   |  <a href="FPPage3.html" target="_blank" style = "text-decoration: none">Food</a>
+   |  <a href="FPPage4.html" target="_blank" style = "text-decoration: none">Geeky Stuff</a></h2>
+<hr style = "height:12px; background-color: #6E7964; border-color: #000000; border-size: 2px;">
+
+<canvas id="theHeadCanvas" width= "800" height= "200" style= "background-color:#B8C9A6;"></canvas>
+<script>
+var Cnvas = document.getElementById("theHeadCanvas");
+var HeadCnvasCntx = Cnvas.getContext('2d');
+
+/* Lines to Frame Logo */ 
+
+HeadCnvasCntx.strokeStyle = '#531C53';
+HeadCnvasCntx.lineWidth = '15';
+HeadCnvasCntx.beginPath();
+HeadCnvasCntx.moveTo(5,23);
+HeadCnvasCntx.lineTo(265,23);
+HeadCnvasCntx.stroke();
+HeadCnvasCntx.beginPath();
+HeadCnvasCntx.moveTo(5,15);
+HeadCnvasCntx.lineTo(5,190);
+HeadCnvasCntx.stroke();
+
+/* Image in canvas */
+var Pic = new Image();
+Pic.src = "Logos/Geekserlogo.jpeg";
+Pic.onload = function()
+{
+	HeadCnvasCntx.drawImage(Pic, 10, 25);
+}
+
+
+/* Heading Text */
+HeadCnvasCntx.lineWidth = '4';
+HeadCnvasCntx.font = 'italic bold 80px "lucida"';
+HeadCnvasCntx.fillStyle = '#8A2E8A';
+HeadCnvasCntx.strokeStyle = '#531C53';
+HeadCnvasCntx.fillText("Geeky Stuff", 325, 120);
+HeadCnvasCntx.strokeText("Geeky Stuff", 325, 120);
+
+</script>
+<hr style = "height:8px; width: 80%; background-color: #6E7964">
+<img class= "thumb" src= "Images/Geeksership.jpg"></img><br>
+<a href="#bottom" id="top">Go to the bottom...</a>
+
+
+
+<hr style = "height:8px; width: 80%; background-color: #6E7964">
+
+<hr class = "style-seven" class = "style-seven:before">
+<h3>The <i><u>Episode VII Star Wars</u></i> Trailer is Here!!</h3>
+
+<a href= "https://youtu.be/OMOVFvcNfvE"><img src="Images/Geekdthstar.jpg" 
+title= "Click for Star Wars Episode VII Trailer">
+</a>
+<br><br>
+
+<a href= "https://youtu.be/PYHdQUyOunA" title= "Click for Spoof Clip">
+Click for Matthew Mcconaughey's reaction to the new Star Wars trailer
+</a>
+
+<hr class = "style-seven" class = "style-seven:before">
+<img class = "fractal" src="Images/Geekfractb.jpeg" title= "Zoe Washburne" 
+onmouseover="this.src='Images/Geekzoe.jpg';" onmouseout="this.src='Images/Geekfractb.jpeg';">
+</img>&nbsp &nbsp
+<a href= "https://youtu.be/Ha20Qsp26Gk?list=UUTiL1q9YbrVam5nP2xzFTWQ"><img src="Images/Geeksun.jpeg" 
+title= "Click for Solar Report">
+</a> &nbsp &nbsp
+<img class = "fractal" src="Images/Geekfractg.jpeg" title= "River Tam" 
+onmouseover="this.src='Images/Geekriver.jpeg';" onmouseout="this.src='Images/Geekfractg.jpeg';">
+</img>
+<br>
+<h3 class= "textmetrics"> Behind every fractal image is a woman ready to kick some serious butt! </h3>
+<hr class = "style-seven" class = "style-seven:before">
+<br><br>
+<hr style = "height:8px; width: 80%; background-color: #6E7964">
+<hr class = "style-seven" class = "style-seven:before">
+<br><br>
+<marquee behavior= "slide" >
+<img src= "Images/captainamerica.jpeg"></img><img src= "Images/starlord.jpg"></img>
+<img src= "Images/ironman.jpg"><img src= "Images/thor.jpeg"></img>
+</marquee>
+<br><br>
+<hr class = "style-seven" class = "style-seven:before">
+<hr style = "height:8px; width: 80%; background-color: #6E7964">
+<br><br>
+<footer>
+<a href="#top" id="bottom">Go back to the top...</a>
+</footer>
+</body> 
+</html>

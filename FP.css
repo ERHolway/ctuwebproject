@@ -1,0 +1,109 @@
+
+<!-- 
+Lab 4, Style Sheet
+Beth Holway 
+-->
+
+hr
+{
+	height:8px; 
+	width: 80%;
+	background-color: #6E7964;
+	border: 2px #42493C;
+	border-width: 3px 0 0 0; 
+	border-radius: 20px; 
+}
+
+.style-seven 
+{ 
+height: 30px; 
+border-style: solid; 
+border-color: #531C53; 
+border-width: 3px 0 0 0; 
+border-radius: 20px; 
+} 
+.style-seven:before 
+{  
+display: block; 
+content: ""; 
+height: 30px; 
+margin-top: -31px; 
+border-style: solid; 
+border-color: #531C53;
+border-width: 0 0 3px 0; 
+border-radius: 20px; 
+}
+
+body
+{
+	background-color: #B8C9A6;
+	width: 850px;
+	font-family: verdana;
+	text-align: center;
+}
+
+img
+{
+	width: 200px;
+	border: 20px solid #7A8E66;
+	
+}
+
+.thumb
+{
+	width: 100px;
+	border: 5px solid black;
+}
+.fractal
+{
+	width: 200px;
+	height: 250px;
+	border: 15px solid #531C53;
+}
+
+.zoeandriver
+{
+	width: 200px;
+	height: 250px;
+	border: 15px solid #99B280;
+}
+.links
+{
+	width: 100px;
+}
+
+div
+{
+	text-align:center;
+}
+
+h1
+{
+	color: #6C9147; 
+	font-family: Parchment;
+	font-size: 50px;
+}
+
+
+a:link
+{
+	color:#8A2E8A;
+}
+
+a:hover
+{
+	color:orange;
+	font-size:35px;
+	font-family: san-serif;
+}
+
+a:visited
+{
+	color:#8A2E8A;
+} 
+
+a:active
+{
+	color:dark green;
+}
+
